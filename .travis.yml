@@ -18,7 +18,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: Ix1ucft7012oW7hq/+lxpBO2SsHZA6L12zhKSoHq0j4EjmgDJVOLDLPzwD4G8Pqzv19hw6Y+aDkny63DFPXIT3TrNjQYvrZlbSnlRiWEKbTfgvaMLsKE/J24zx/kf6oq2H+TWMDcl4MkfUJby+nBuHb0XAHqe0ifToh0ebigobr/RxS9LTQTvoE8tnfOGhR9r7m9muzH8v12Zmw4dlac5XSPfevDQp0ECUuLDxSVxHAJpOb4r23DTfTvFeeUg4mC3dREnjl+Io8df+OOiiYNMYCTkqrUcrPC6km2t6I3Ab3PXbkauYoiGmEPtPvGkP0BZ+fZ7idAl1W6R9Ye//pD7dpO/3k7rDhpylg4DcrPmCBp/mbj0W3MSg0QwMK6jwqGF+98vdqOtb9vP5sdKgxVVvb5oNuS4JUnmvBiRQYmwDC1htS6Trd7d0p52VpaEuxTIkuVhvE5JXrK+LwjpPYWr30N5HnsY1mR6JtUNdsjuuXBl6C5xnwwcNsz5P9p6HwmRcCo+j4c5MZAi5qtY2UXP4+9Fu4I6MheONaKTjiHM2Vi/VW4eeXKfTPi+xfTRQMYuGd/lXuqdG6qy4yifQsiE5Zh7SdcrCEbhmsOEzJcHReNX12QDBCerDc0OwXE80TsnokIkZNBjqRcA6WeUMZFuMSoQO/v8UmbaxSPdb6H1RQ=
+    secure: b0d8231cc1e9296aeb30ad447abf7750b9c4a843
     file:
     - logshare.linux.amd64
     on:
