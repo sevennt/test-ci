@@ -20,7 +20,6 @@ deploy:
   file:
   - logshare.linux.amd64
   on:
-    repo: sevennt/test-ci
     tags: true
 env:
   global:
