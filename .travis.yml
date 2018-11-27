@@ -7,18 +7,17 @@ matrix:
     - echo $GOPATH
     script:
     - go build ./...
+
 before_deploy:
 - git config --local user.name "YOUR GIT USER NAME"
 - git config --local user.email "YOUR GIT USER EMAIL"
 - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
 - git tag $TRAVIS_TAG
+
 deploy:
   provider: releases
   skip_cleanup: true
-  api_key:
-    secure: DsHXSnRG8n9KMAd/wkwa0Oe+qEVdFuvb6/1i7zbAQZLqHAJSxGrmMPaxJoxl64yAB8Tc8D+KI+dY+/OaCTlKlfspl1dIocQrDoeNbaJ9CEzjkeBU7UgC12iuhrs0dc3qkEthHJoKPyp1VFv3f5vGJF/LsYRsEnBSsUIrEk6cOlX16h3JspRGQuI62+sM3eYjPDeh3WEhPDK1ebrY+qGLkMV4jxMHbA3955QFRtCAKwfKvPDrVdcah73uHn8ODUm570hQT9xqPIGgyhuA2ZX3kwsbVL7lbtmRQwRtzCxiKLV+s71sRQdJemAXJS4+uPC8/iBuvO9My+uavhCxBeZr0RlFcml0DzAr52QKy+jUTHqQKluOA2hcxsHmSeKcjGepXFAg7Ytd0KEKDwwC3uAhZo1/CZTRCvndg/W+0MxinXc3ZlJ3OSGHetfZZ9+RARxYkJcT3E2gq0ZDt7kmqjZTdztP1OC9+EMgBwnMr8dW+3alBmw26/6QhZVzUjIMR6vphl5gZuYUvsoBDlE+ad+rTShjNFt/sTew1iS6lpIFKTVR5PXbtjBJrREyZqYerAgXbZvUJu5OFOxn40GFZJemR7GTtndodGvBvZOK4kC/h4kyjIOQUuOnu6J5NcxhiDJqqYqms+zHSC7WnQu8XNfUXWTmo4oRG0WJcHOlugM7vbA=
-    file:
-    - logshare.linux.amd64
-    on:
-      repo: sevennt/test-ci
-      tags: true
+
+env:
+  global:
+    secure: Ix1ucft7012oW7hq/+lxpBO2SsHZA6L12zhKSoHq0j4EjmgDJVOLDLPzwD4G8Pqzv19hw6Y+aDkny63DFPXIT3TrNjQYvrZlbSnlRiWEKbTfgvaMLsKE/J24zx/kf6oq2H+TWMDcl4MkfUJby+nBuHb0XAHqe0ifToh0ebigobr/RxS9LTQTvoE8tnfOGhR9r7m9muzH8v12Zmw4dlac5XSPfevDQp0ECUuLDxSVxHAJpOb4r23DTfTvFeeUg4mC3dREnjl+Io8df+OOiiYNMYCTkqrUcrPC6km2t6I3Ab3PXbkauYoiGmEPtPvGkP0BZ+fZ7idAl1W6R9Ye//pD7dpO/3k7rDhpylg4DcrPmCBp/mbj0W3MSg0QwMK6jwqGF+98vdqOtb9vP5sdKgxVVvb5oNuS4JUnmvBiRQYmwDC1htS6Trd7d0p52VpaEuxTIkuVhvE5JXrK+LwjpPYWr30N5HnsY1mR6JtUNdsjuuXBl6C5xnwwcNsz5P9p6HwmRcCo+j4c5MZAi5qtY2UXP4+9Fu4I6MheONaKTjiHM2Vi/VW4eeXKfTPi+xfTRQMYuGd/lXuqdG6qy4yifQsiE5Zh7SdcrCEbhmsOEzJcHReNX12QDBCerDc0OwXE80TsnokIkZNBjqRcA6WeUMZFuMSoQO/v8UmbaxSPdb6H1RQ=
